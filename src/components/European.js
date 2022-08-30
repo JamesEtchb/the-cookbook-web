@@ -1,27 +1,20 @@
 import { useEffect, useState } from 'react'
+import RecipeCard from './RecipeCard'
 
 export default function Asian() {
-  const [showEuropean, setShowEuropean] = useState([])
+  const [showFood, setShowFood] = useState([])
   useEffect(() => {
     fetch('https://the-cookbook-api.web.app/european')
       .then((results) => results.json())
-      .then((data) => setShowEuropean(data))
+      .then((data) => setShowFood(data))
       .catch(console.error)
-  }, [setShowEuropean])
-  if (!showEuropean) {
+  }, [setShowFood])
+  if (!showFood) {
     ;<h2>No European recipe to show</h2>
   }
   return (
     <>
-      {showEuropean.map(data => {
-          return (
-            <ul key={data._id}>
-                <li>{data.name}</li>
-                <li>{data.ingredients}</li>
-                <li>{data.recipe}</li>
-            </ul>
-      )
-      })}
-      </>
+      <RecipeCard showFood={showFood} />
+    </>
   )
 }
