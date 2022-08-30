@@ -1,24 +1,27 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function African({ showAfrican, setShowAfrican }) {
+export default function African() {
+  const [showAfrican, setShowAfrican] = useState([])
   useEffect(() => {
-    fetch('african url goes here')
+    fetch('https://the-cookbook-api.web.app/african')
       .then((results) => results.json())
-      .then((european) => setShowAfrican(european))
+      .then((data) => setShowAfrican(data))
       .catch(console.error)
   }, [setShowAfrican])
   if (!showAfrican) {
-    ;<h2>No European recipes to show</h2>
+    ;<h2>No African recipes to show</h2>
   }
   return (
-    <ul>
-      {showAfrican(
-        (african) => (
-          (<li key={european.id}>{european.name}</li>),
-          (<li key={european.id}>{european.ingredients}</li>),
-          (<li key={european.id}>{european.recipe}</li>)
+    <body>
+      {showAfrican.map(data => {
+        return(
+          <ul key={data._id} className='recipes'>
+            <li className='recipes'>{data.name}</li>
+            <li className='recipes'>{data.ingredients}</li>
+            <li className='recipes'>{data.recipe}</li>
+          </ul>
         )
-      )}
-    </ul>
+      })}
+    </body>
   )
 }

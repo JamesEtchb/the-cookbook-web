@@ -1,22 +1,27 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function Latin({ showLatin, setShowLatin }) {
-    const getData = () => {
-        fetch('http://localhost:3030/latin')
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.error(err))
-        console.log('getting data')
-      }
-  return (
-    <ul>
-      {showLatin.map(
-        (latin) => (
-          (<li key={latin.id}>{latin.name}</li>),
-          (<li key={latin.id}>{latin.ingredients}</li>),
-          (<li key={latin.id}>{latin.recipe}</li>)
-        )
-      )}
-    </ul>
-  )
-}
+export default function Latin() {
+  const [showLatin, setShowLatin] = useState([])
+    useEffect(() => {
+      fetch('https://the-cookbook-api.web.app/latin')
+        .then((results) => results.json())
+        .then((data) => setShowLatin(data))
+        .catch(console.error)
+    }, [setShowLatin])
+    if (!showLatin) {
+      ;<h2>No Latin recipes to show</h2>
+    }
+    return (
+      <>
+        {showLatin.map(data => {
+          return(
+            <ul key={data._id}>
+              <li>{data.name}</li>
+              <li>{data.ingredients}</li>
+              <li>{data.recipe}</li>
+            </ul>
+          )
+        })}
+      </>
+    )
+  }

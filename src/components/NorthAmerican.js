@@ -1,27 +1,27 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function NorthAmerican({
-  showNorthAmerican,
-  setShowNorthAmerican,
-}) {
+export default function NorthAmerican() {
+  const [showNorthAmerican, setShowNorthAmerican] = useState([])
   useEffect(() => {
-    fetch('north america link goes here')
+    fetch('https://the-cookbook-api.web.app/north-american')
       .then((results) => results.json())
-      .then((northAmerican) => setShowNorthAmerican(northAmerican))
+      .then((data) => setShowNorthAmerican(data))
       .catch(console.error)
   }, [setShowNorthAmerican])
   if (!showNorthAmerican) {
     ;<h2>No North American recipes to show</h2>
   }
   return (
-    <ul>
-      {showNorthAmerican(
-        (northAmerican) => (
-          (<li key={northAmerican.id}>{northAmerican.name}</li>),
-          (<li key={northAmerican.id}>{northAmerican.ingredients}</li>),
-          (<li key={northAmerican.id}>{northAmerican.recipe}</li>)
+    <>
+      {showNorthAmerican.map(data => {
+        return(
+          <ul key={data._id}>
+            <li>{data.name}</li>
+            <li>{data.ingredients}</li>
+            <li>{data.recipe}</li>
+          </ul>
         )
-      )}
-    </ul>
+      })}
+    </>
   )
 }

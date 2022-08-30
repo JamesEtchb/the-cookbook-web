@@ -1,24 +1,27 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function European({ showEuropean, setShowEuropean }) {
+export default function Asian() {
+  const [showEuropean, setShowEuropean] = useState([])
   useEffect(() => {
-    fetch('european url goes here')
-      .then((results) => results.json)
-      .then((european) => setShowEuropean(european))
+    fetch('https://the-cookbook-api.web.app/european')
+      .then((results) => results.json())
+      .then((data) => setShowEuropean(data))
       .catch(console.error)
   }, [setShowEuropean])
   if (!showEuropean) {
-    ;<h2>No European recipes to show</h2>
+    ;<h2>No European recipe to show</h2>
   }
   return (
-    <ul>
-      {showEuropean(
-        (european) => (
-          (<li key={european.id}>{european.name}</li>),
-          (<li key={european.id}>{european.ingredients}</li>),
-          (<li key={european.id}>{european.recipe}</li>)
-        )
-      )}
-    </ul>
+    <>
+      {showEuropean.map(data => {
+          return (
+            <ul key={data._id}>
+                <li>{data.name}</li>
+                <li>{data.ingredients}</li>
+                <li>{data.recipe}</li>
+            </ul>
+      )
+      })}
+      </>
   )
 }

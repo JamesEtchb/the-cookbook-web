@@ -1,5 +1,12 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 body {
+    display: flex;
     background-color: antiquewhite;
+}
+
+.recipes {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
 }
