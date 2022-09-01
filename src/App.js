@@ -1,12 +1,14 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Latin from './Pages/Latin.js'
+import Navbar from './components/Navbar'
+
 import Asian from './Pages/Asian.js'
 import African from './Pages/African.js'
 import European from './Pages/European.js'
+import Latin from './Pages/Latin.js'
 import NorthAmerican from './Pages/NorthAmerican.js'
 import Home from './Pages/Home'
-import Navbar from './components/Navbar'
+import PersonalCookbook from './Pages/PersonalCookbook'
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path='European' element={<European />} />
         <Route path='Latin' element={<Latin />} />
         <Route path='NorthAmerican' element={<NorthAmerican />} />
+        <Route path='Personal' element={<PersonalCookbook />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>

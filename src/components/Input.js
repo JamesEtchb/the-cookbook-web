@@ -1,7 +1,6 @@
-import { Button } from 'bootstrap'
 import { useState, useEffect } from 'react'
 
-export default function Input () {
+export default function InputForm () {
     const [formSubmitted, setFormSubmitted] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
     const [form, setForm] = useState({})
@@ -10,7 +9,7 @@ export default function Input () {
     async function formSubmit(e) {
         e.preventDefault()
         try {
-            const results = await fetch('need to figure out what link to use', {
+            const results = await fetch('https://the-cookbook-api.web.app/personal', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
@@ -30,10 +29,10 @@ export default function Input () {
         setForm({ ...form, [event.target.name]: event.target.value })
     }
     const updateIngredients = (event) => {
-        setForm({ ...form, [event.target.ingredients]: event.target.value })
+        setForm({ ...form, [event.target.name]: event.target.value })
     }
     const updateRecipe = (event) => {
-        setForm({ ...form, [event.target.recipe]: event.target.value })
+        setForm({ ...form, [event.target.name]: event.target.value })
     }
     console.log(form)
 
@@ -46,7 +45,7 @@ export default function Input () {
                 <input type="text" name='ingredients' placeholder='Ingredients' onChange={updateIngredients} value={form.ingredients} />
                 <label>Recipe</label>
                 <input type="text" name='recipe' placeholder='Recipe' onChange={updateRecipe} value={form.recipe} />
-                {!formSubmitted && <Button>Submit Form</Button>}
+                {!formSubmitted && <button>Submit Form</button>}
                 {errorMessage && (
                     <h1>
                         There was an error: <br />

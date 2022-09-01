@@ -10,7 +10,7 @@ export default function African() {
       .catch(console.error)
   }, [setShowFood])
   if (!showFood) {
-    ;<h2>No African recipes to show</h2>
+    <h2>No African recipes to show</h2>
   }
   return (
     <>
