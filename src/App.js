@@ -1,11 +1,11 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Latin from './components/Latin.js'
-import Asian from './components/Asian.js'
-import African from './components/African.js'
-import European from './components/European.js'
-import NorthAmerican from './components/NorthAmerican.js'
-import Home from './components/Home'
+import Latin from './Pages/Latin.js'
+import Asian from './Pages/Asian.js'
+import African from './Pages/African.js'
+import European from './Pages/European.js'
+import NorthAmerican from './Pages/NorthAmerican.js'
+import Home from './Pages/Home'
 import Navbar from './components/Navbar'
 
 function App() {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import RecipeCard from './RecipeCard'
+import RecipeCard from '../components/RecipeCard'
 
 export default function Asian() {
   const [showFood, setShowFood] = useState([])
