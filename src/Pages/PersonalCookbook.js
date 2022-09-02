@@ -16,7 +16,7 @@ export default function PersonalCookbook () {
     return (
         <>
             <RecipeCard showFood={showFood} />
-            <InputForm />
+            <InputForm setShowFood={setShowFood} />
         </>
     )
 }
