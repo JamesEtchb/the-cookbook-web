@@ -2,7 +2,7 @@ import Nav from 'react-bootstrap/Nav'
 
 export default function Navbar() {
   return (
-    <Nav variant="tabs" defaultActiveKey="/">
+    <Nav variant="tabs" defaultActiveKey="/" class='navbar fixed-center'>
       <Nav.Item>
         <Nav.Link href="/">Home</Nav.Link>
       </Nav.Item>
@@ -23,6 +23,9 @@ export default function Navbar() {
       </Nav.Item>
       <Nav.Item>
         <Nav.Link href="./Personal">Personal</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="./About">About</Nav.Link>
       </Nav.Item>
     </Nav>
   )

@@ -1,5 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Header from './components/Header'
 import Navbar from './components/Navbar'
 
 import Asian from './Pages/Asian.js'
@@ -9,11 +11,14 @@ import Latin from './Pages/Latin.js'
 import NorthAmerican from './Pages/NorthAmerican.js'
 import Home from './Pages/Home'
 import PersonalCookbook from './Pages/PersonalCookbook'
+import About from './Pages/About'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <>
-    <Navbar />
+    <Header />
+    <Navbar className='nav'/>
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
@@ -23,9 +28,11 @@ function App() {
         <Route path='Latin' element={<Latin />} />
         <Route path='NorthAmerican' element={<NorthAmerican />} />
         <Route path='Personal' element={<PersonalCookbook />} />
+        <Route path='About' element={<About />} className='about' />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
+    <Footer />
     </>
   )
 }

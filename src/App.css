@@ -3,3 +3,17 @@
 body {
     background-color: antiquewhite;
 }
+
+.nav {
+    background-color: white ;
+    display: flex;
+    align-items: center;
+
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 40px 0;
+    padding: 40%;
+}
