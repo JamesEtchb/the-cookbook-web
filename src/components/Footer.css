@@ -1,7 +1,19 @@
 .footer {
-    height: 100px;
-    width: 100%;
-    background-image: linear-gradient(rgb(239, 237, 233), antiquewhite);
-    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
     padding-top: 40px;
+    height: 100px;
+    background-image: linear-gradient( antiquewhite, rgb(239, 237, 233));
+    text-align: center;
+}
+
+.footerButtonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
 }
