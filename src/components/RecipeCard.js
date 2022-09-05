@@ -1,22 +1,15 @@
 import Card from 'react-bootstrap/Card'
+import React from 'react'
 
-export default function RecipeCard({ showFood }) {
-  const data = showFood
-  console.log(data)
+export default function RecipeCard({ data }) {
+  console.log({data})
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }} >
-      {showFood.map((data) => {
-        return (
-            <Card
-              style={{ width: '30%', margin: '20px' }} key={data._id}>
-              <Card.Body>
-                <Card.Title>{data.name}</Card.Title>
-                <Card.Subtitle>{data.ingredients}</Card.Subtitle>
-                <Card.Text>{data.recipe}</Card.Text>
-              </Card.Body>
-            </Card>
-        )
-      })}
-    </div>
+    <Card>
+      <Card.Body>
+        <Card.Title>{data.name}</Card.Title>
+        <Card.Subtitle>{data.ingredients}</Card.Subtitle>
+        <Card.Text>{data.recipe}</Card.Text>
+      </Card.Body>
+    </Card>
   )
 }

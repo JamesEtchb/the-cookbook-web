@@ -1,6 +1,7 @@
 import InputForm from "../components/Input";
-import RecipeCard from '../components/RecipeCard'
+import FoodCarousel from "../components/Carousel";
 import { useState, useEffect } from "react";
+import './Personal.css'
 
 export default function PersonalCookbook () {
     const [showFood, setShowFood] = useState([])
@@ -15,7 +16,11 @@ export default function PersonalCookbook () {
     }
     return (
         <>
-            <RecipeCard showFood={showFood} />
+        <div className="personal">
+            <h1>Welcome to your personal cookbook</h1>
+            <h3>Please enjoy filling out your own recipes and being sure they are safe.</h3>
+            <FoodCarousel showFood={showFood} />
+        </div>
             <InputForm setShowFood={setShowFood} />
         </>
     )

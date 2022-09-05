@@ -1,3 +1,7 @@
 .footer {
-    margin-right: 400px;
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(rgb(239, 237, 233), antiquewhite);
+    text-align: center;
+    padding-top: 40px;
 }

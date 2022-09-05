@@ -17,3 +17,15 @@
   background-color: lightblue;
   color: black;
 }
+
+@media screen and (max-width: 540px) {
+  .headerButton {
+    height: 30px;
+    margin: 15px 2px;
+  }
+  .headerLogo {
+    width: 250px;
+    margin: -45px -10px 0 40px;
+  }
+
+}

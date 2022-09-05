@@ -1,0 +1,8 @@
+.personal {
+    background-image: url('../resources/personal.jpg');
+    background-color: antiquewhite;
+    background-size: 80vw;
+    margin: 0 10%;
+    height: 100vw;
+}
+

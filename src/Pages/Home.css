@@ -1,5 +1,7 @@
-.logo {
-    width: 500px; 
-    display: flex;
-    margin: 10px 30%;   
+.homeImg {
+    background-image: url('../resources/landingpage.png');
+    background-color: white;
+    background-size: 100vw;
+    height: 100vw;
 }
+

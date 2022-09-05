@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+.chefspage {
+  background-image: url('../resources/chefs.jpg');
+  background-color: tan;
+  background-size: 80vw;
+  margin: 0 10%;
+  height: 100vw;
+}
+
+h1 {
+  padding-left: 130px;
+  padding-top: 50px;
+  font-family: Parisienne;
+  font-size: 6rem;
+}
+
+h3 {
+  padding-left: 160px;
+  padding-top: 50px;
+  padding-bottom: 200px;
+  font-family: Parisienne;
+  font-size: 4rem;
+}
+
+
+
+@media screen and (max-width: 1400px) {
+  h1 {
+    padding-left: 130px;
+    padding-top: 50px;
+    font-family: Parisienne;
+    font-size: 4.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+    padding-left: 160px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    font-family: Parisienne;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  h1 {
+    padding-left: 140px;
+    padding-top: 50px;
+    font-family: Parisienne;
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    padding-left: 160px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    font-family: Parisienne;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  h1 {
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: Parisienne;
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    padding-left: 160px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    font-family: Parisienne;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  h1 {
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: Parisienne;
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    font-family: Parisienne;
+  }
+}

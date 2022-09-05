@@ -1,19 +1,16 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 body {
-    background-color: antiquewhite;
-}
-
-.nav {
-    background-color: white ;
-    display: flex;
-    align-items: center;
-
+  background-color: antiquewhite;
+  display: grid;
+  grid-template-rows: 4rem 1fr 3rem;
 }
 
 .about {
-    display: flex;
-    align-items: center;
-    margin: 40px 0 40px 0;
-    padding: 40%;
+  display: flex;
+  align-items: center;
+  margin: 40px 0 40px 0;
+  padding: 40%;
 }

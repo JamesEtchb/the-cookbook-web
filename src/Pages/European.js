@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import RecipeCard from '../components/RecipeCard'
+import FoodCarousel from '../components/Carousel'
+import './Chefs.css'
 
 export default function Asian() {
   const [showFood, setShowFood] = useState([])
@@ -13,8 +14,10 @@ export default function Asian() {
     ;<h2>No European recipe to show</h2>
   }
   return (
-    <>
-      <RecipeCard showFood={showFood} />
-    </>
+    <div className='chefspage'>
+      <h1>Here are some recipes from <br /> European Countries.</h1>
+      <h3>Please enjoy and try some for yourself.</h3>
+      <FoodCarousel showFood={showFood} />
+    </div>
   )
 }

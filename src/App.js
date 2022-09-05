@@ -18,7 +18,7 @@ function App() {
   return (
     <>
     <Header />
-    <Navbar className='nav'/>
+    <Navbar />
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
