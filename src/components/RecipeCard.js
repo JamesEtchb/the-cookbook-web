@@ -6,7 +6,7 @@ export default function RecipeCard({ data }) {
   console.log({ data })
   return (
     <div className='cardBackground'>
-      <Card className="cardContainer">
+      <Card className="cardContainer" style={{ backgroundColor: 'transparent'}}>
         <Card.Body>
           <Card.Title>
             <h1>{data.name}</h1>

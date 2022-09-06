@@ -11,6 +11,7 @@ export default function FoodCarousel({ showFood }) {
         variant="dark"
         slide={false}
         interval={null}
+        style={{backgroundColor: 'transparent'}}
       >
         {showFood.map((data) => (
           <Carousel.Item key={data.id} className="card">
