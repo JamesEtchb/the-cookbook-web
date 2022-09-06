@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 .chefspage {
-  background-image: url('../resources/chefs.jpg');
+  background-image: url('../resources/chefs.png');
   background-color: tan;
-  background-size: 80vw;
-  margin: 0 10%;
+  background-size: cover;
   height: 100vw;
+  background-repeat: no-repeat;
 }
 
 h1 {

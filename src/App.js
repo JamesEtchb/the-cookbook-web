@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Header from './components/Header'
-import Navbar from './components/Navbar'
+import FoodNavbar from './components/FoodNavbar.js'
 
 import Asian from './Pages/Asian.js'
 import African from './Pages/African.js'
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
     <Header />
-    <Navbar />
+    <FoodNavbar />
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />

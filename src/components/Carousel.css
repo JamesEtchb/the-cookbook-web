@@ -1,5 +1,20 @@
-.card {
-    padding: 10px 50px;
-    text-align: center;
-    margin: 50px 0 ;
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+.recipeContainer {
+    /* margin:250px 150px 00px 00px; */
+    overflow: auto;
+    width: 65%;
+    height: 65%;
+    margin: 10% 30% 0 15%;
+    /* background-color: rgba(245, 245, 245, 1); */
+    background-color: transparent;
+}
+
+.cardContainer {
+    font-family: Parisienne;
+    color: black;
+}
+
+.cardBackground {
+    background-color: red;
 }

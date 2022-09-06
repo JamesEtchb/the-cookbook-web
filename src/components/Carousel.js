@@ -5,19 +5,21 @@ import './Carousel.css'
 
 export default function FoodCarousel({ showFood }) {
   return (
-    <Carousel
-      className="container"
-      variant="dark"
-      slide={false}
-      interval={null}
-    >
-      {showFood.map((data) => (
-        <Carousel.Item key={data.id} className='card' >
-          <div>
-            <RecipeCard data={data}  />
-          </div>
-        </Carousel.Item>
-      ))}
-    </Carousel>
+    <div className='recipeContainer'>
+      <Carousel
+        className="container"
+        variant="dark"
+        slide={false}
+        interval={null}
+      >
+        {showFood.map((data) => (
+          <Carousel.Item key={data.id} className="card">
+            <div>
+              <RecipeCard data={data} />
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
   )
 }
