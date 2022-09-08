@@ -1,11 +1,10 @@
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import { useState } from 'react'
 
-export default function Login({ setToken, setIsUser, loginShow }) {
-  const handleLogin = ({ email, password }) => {
-    fetch('https://the-cookbook-web.web.app/users/login', {
+export default function Signup({ setToken, setIsUser, signupShow }) {
+  const handleSignUp = ({ email, password }) => {
+    fetch('https://the-cookbook-web.web.app/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -20,12 +19,12 @@ export default function Login({ setToken, setIsUser, loginShow }) {
       .catch((err) => alert(err.message))
   }
   return (
-    <Modal {...loginShow} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal  size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">Login</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form onFinish={handleLogin}>
+        <Form onFinish={handleSignUp}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter Email" />
@@ -37,11 +36,11 @@ export default function Login({ setToken, setIsUser, loginShow }) {
         </Form>
       </Modal.Body>
       <Button variant="primary" type="submit">
-        Submit
+        Sign up
       </Button>
-      <Button onClick={loginShow.hide}>Close</Button>
-      <Button onClick={() => setIsUser(false)} type={'link'}>
-        Sign Up
+      <Button onClick={signupShow.hide}>Close</Button>
+      <Button onClick={() => setIsUser(true)} type={'link'}>
+        Login
       </Button>
     </Modal>
   )

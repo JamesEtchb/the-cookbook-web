@@ -15,3 +15,7 @@
 .cardBackground {
     /* background-color: red; */
 }
+
+.carousel-item.active {
+    background: transparent;
+}
