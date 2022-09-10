@@ -6,12 +6,12 @@ import './Personal.css'
 export default function PersonalCookbook() {
   const [showFood, setShowFood] = useState([])
   const [token, setToken] = useState('')
-  useEffect(() => {
-    const _token = localStorage.getItem('token')
-    if (_token) {
-      setToken(_token)
-    }
-  }, [])
+//   useEffect(() => {
+//     const _token = localStorage.getItem('token')
+//     if (_token) {
+//       setToken(_token)
+//     }
+//   }, [])
   useEffect(() => {
     fetch('https://the-cookbook-api.web.app/personal')
       .then((results) => results.json())
