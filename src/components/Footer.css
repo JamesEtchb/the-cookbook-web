@@ -1,19 +1,20 @@
 .footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: 100vw;
-    padding-top: 40px;
-    height: 100px;
-    background-image: linear-gradient( antiquewhite, rgb(239, 237, 233));
     text-align: center;
+    height: 150px;
+    width: 100vw;
+    background-image: linear-gradient( antiquewhite, rgb(239, 237, 233));
+    display: flex;
+    flex-direction: row;
 }
 
-.footerButtonsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    text-align: center;
+.logo {
+    margin: 50px 10px;
 }
+
+h4 {
+    padding-left: 400px;
+    padding-top: 60px;
+    padding-right: 20px;
+    font-family: Parisienne;
+    font-size: 2rem;
+  }

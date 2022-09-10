@@ -14,6 +14,7 @@ export default function RecipeCard({ data }) {
           <Card.Subtitle>
             <h2>{data.ingredients}</h2>
           </Card.Subtitle>
+          <br />
           <Card.Text>
             <h2>{data.recipe}</h2>
           </Card.Text>

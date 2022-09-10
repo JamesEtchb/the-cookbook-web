@@ -1,21 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 .recipeContainer {
-    overflow: auto;
-    width: 65%;
+    overflow: scroll;
+    width: 57.5%;
     height: 65%;
-    margin: 10% 30% 0 15%;
-    z-index: 1;
-}
+    margin: -5% 0 0 18%;
 
-.cardContainer {
-    font-family: Parisienne;
-}
-
-.cardBackground {
-    /* background-color: red; */
 }
 
 .carousel-item.active {
     background: transparent;
+    border-color: transparent;
 }
+

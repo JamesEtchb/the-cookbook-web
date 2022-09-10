@@ -7,16 +7,18 @@ import './Header.css'
 
 function SignupModal() {
   const [show, setShow] = useState(false)
+  const [email, setEmail] = useState()
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
-  const handleSignUp = ({ email, password }) => {
-    fetch('https://the-cookbook-web.web.app/users', {
+
+  const handleSignUp = () => {
+    fetch('http://localhost:4343/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -40,7 +42,7 @@ function SignupModal() {
           <Form onFinish={handleSignUp}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter Email" />
+              <Form.Control value={email} type="email" placeholder="Enter Email" onChange={(e)=>setEmail(e.target.value)}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
@@ -95,7 +97,7 @@ function LoginModal() {
           <Form onFinish={handleLogin}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter Email" />
+              <Form.Control value='email' type="email" placeholder="Enter Email" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
@@ -138,7 +140,7 @@ export default function Header() {
         alt="The cookbook logo. Where all your recipes live"
       />
       <div>
-        <form onSubmit={formSubmit}>
+        <form onSubmit={formSubmit} className='headerButton' >
           <SignupModal className='headerButton' />
           <LoginModal className='headerButton' />
           {/* <Button className="headerButton" onClick={() => setSignupShow(true)}>
