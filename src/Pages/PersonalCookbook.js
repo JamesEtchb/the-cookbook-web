@@ -28,7 +28,9 @@ export default function PersonalCookbook() {
         <h3>
           Please enjoy filling out your own recipes and enjoying them forever.
         </h3>
-        <FoodCarousel showFood={showFood} />
+        <br />
+        <br />
+        <FoodCarousel className='personalCarousel' showFood={showFood} />
       </div>
       <InputForm setShowFood={setShowFood} />
     </>
