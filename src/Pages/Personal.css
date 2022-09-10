@@ -1,8 +1,7 @@
 .personal {
-    background-image: url('../resources/personal.jpg');
+    background-image: url('../resources/personal.png');
     background-color: antiquewhite;
-    background-size: 80vw;
-    margin: 0 10%;
+    background-size: cover;
     height: 100vw;
 }
 
