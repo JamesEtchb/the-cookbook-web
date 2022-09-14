@@ -3,22 +3,23 @@ import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Container'
+import { Link } from 'react-router-dom'
 
 export default function FoodNavbar() {
-  return(
-    <Navbar bg='antiquewhite' expand='lg'>
+  return (
+    <Navbar bg="antiquewhite" expand="lg">
       <Container fluid>
-        <Navbar.Brand href='/'>Foods of the world</Navbar.Brand>
-        <Navbar.Toggle aria-controls='navbarScroll' />
-        <Navbar.Collapse id='navbarScroll'>
-          <Nav className='me-auto my-2 my-lg-0' style={{ maxheight: '50px'}} navbarScroll>
-            <Nav.Link href='./African'>African</Nav.Link>
-            <Nav.Link href='./Asian'>Asian</Nav.Link>
-            <Nav.Link href='./European'>European</Nav.Link>
-            <Nav.Link href='./Latin'>Latin</Nav.Link>
-            <Nav.Link href='./NorthAmerican'>North American</Nav.Link>
-            <Nav.Link href='./Personal'>Personal</Nav.Link>
-            <Nav.Link href='./About'>About Me</Nav.Link>
+        <Navbar.Brand href="/">Foods of the world</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="me-auto my-2 my-lg-0" style={{ maxheight: '50px' }} navbarScroll>
+            <Nav.Link href="./African">African</Nav.Link>
+            <Nav.Link href="./Asian">Asian</Nav.Link>
+            <Nav.Link href="./European">European</Nav.Link>
+            <Nav.Link href="./Latin">Latin</Nav.Link>
+            <Nav.Link href="./NorthAmerican">North American</Nav.Link>
+            <Nav.Link href="./Personal">Personal</Nav.Link>
+            <Nav.Link href="./About">About Me</Nav.Link>
           </Nav>
           {/* <Form className='d-flex'>
             <Form.Control type='search' placeholder='Search' className='me-2' aria-label='Search' />
@@ -41,5 +42,3 @@ export default function FoodNavbar() {
 //   Something else here
 // </NavDropdown.Item>
 // </NavDropdown>
-
-

@@ -5,3 +5,7 @@
     height: 100vw;
 }
 
+.newRecipe {
+    align-items: center;
+    align-content: center;
+}
